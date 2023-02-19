@@ -1,6 +1,6 @@
 import Navbar from "./Navbar.component";
 import FormRow from "./FormRow.component";
-import Logo from "./Logo.component";
+import Logo from "./Logo";
 import UsersList from "./UsersList.component";
 import User from "./User.component";
 import Modal from "./Modal.component";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { validateEmail } from "../utils/validateEmail";
 import { PAGES } from "../constants";
 
-import { FormRow, Modal, findUserByEmail } from "../components";
+import { FormRow, Modal, findUserByEmail, Logo } from "../components";
 import Wrapper from "../styles/styled/Login.styled";
 
 const [, voting] = PAGES;
@@ -85,6 +85,7 @@ const Login = ({ setPage }) => {
     return (
         <Wrapper className="full-page">
             <form className="form" onSubmit={onSubmit}>
+                <Logo/>
                 <FormRow
                     error={emailError}
                     type="email"

@@ -2,11 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { PAGES } from "../constants";
 
-import Wrapper from "../styles/styled/AdminPage.styled";
+import Wrapper from "../styles/styled/Admin.styled";
 import { UserTable } from "../components";
 import { getItemByKey } from "../components";
 
-const AdminPage = ({ setPage }) => {
+const Admin = ({ setPage }) => {
     const [totalVotes, setTotalVotes] = useState(getItemByKey("votedUsers"));
     const [landing] = PAGES;
 
@@ -50,4 +50,4 @@ const AdminPage = ({ setPage }) => {
     );
 };
 
-export default AdminPage;
+export default Admin;

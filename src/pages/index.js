@@ -1,6 +1,6 @@
-import Login from "./Login.page";
+import Login from "./Login";
 import Vote from "./Vote";
-import Admin from "./AdminPage";
+import Admin from "./Admin";
 import UserAfterVote from "./UserAfterVote";
 import { findUserByEmail } from "../utils/localStorageFunctions";
 

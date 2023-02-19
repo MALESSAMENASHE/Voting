@@ -9,7 +9,7 @@ const Logo = () => {
                 alt="logo"
                 className="logo"
             />
-            <h2 className="logo-motto">WHAT IS YOUR LIFE STYLE</h2>
+            <h2 className="logo-motto">CHOOSE YOUR LIFE STYLE</h2>
         </>
     );
 };

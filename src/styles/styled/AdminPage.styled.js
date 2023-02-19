@@ -29,15 +29,15 @@ const Wrapper = styled.div`
     }
 
     .user-voted {
-        background-color: #faeab1;
+        background-color: #d1e7dd;
     }
 
     .user-not-voted {
-        background-color: #c58940;
+        background-color: #0f6269;
     }
 
     .user-table-first-line {
-        background-color: #e97777;
+        background-color: #0f6269 ;
     }
 
     .vote-status {

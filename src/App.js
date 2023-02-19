@@ -1,34 +1,30 @@
 import { useState } from "react";
 
-import { PAGES, styles } from "./constants";
-import { users } from "./data";
+import { PAGES} from "./constants";
+import { Users } from "./data";
 
-import { Landing, Vote, UserAfterVote, AdminPage } from "./pages";
+import { Login, Vote, UserAfterVote, AdminPage } from "./pages";
 
 import "./styles/App.css";
 
+const userData = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null;
 
 const App = () => {
-    const [page, setPage] = useState("landing");
+  const [page, setPage] = useState('login');
 
-    const [landing, voting, userAfterVote, adminPage] = PAGES;
+  const [login, vote, userAfterVote, adminPage ] = PAGES;
 
-    const data = [...users];
-
-    if (localStorage.getItem("Run") === null) {
-        styles.forEach((el) => {
-            localStorage.setItem(el, [JSON.stringify([])]);
-        });
+  useEffect(() => {
+    if (!userData) {
+      setPage(login);
+    } else {
+      setPage(vote);
     }
-
-    if (localStorage.getItem("votedUsers") === null) {
-        localStorage.setItem("votedUsers", JSON.stringify([]));
-    }
-    localStorage.setItem("usersData", JSON.stringify(data));
+  }, [login, vote]);
     switch (page) {
-        case landing:
+        case login:
             return <Landing setPage={setPage} />;
-        case voting:
+        case vote:
             return <Vote setPage={setPage} />;
         case userAfterVote:
             return <UserAfterVote setPage={setPage} />;
